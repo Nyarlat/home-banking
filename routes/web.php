@@ -12,4 +12,7 @@
 */
 
 Route::get('/','HomeController@index');
+Route::get('balance', 'BalanceController@index');
+Route::get('service', 'ServiceController@index');
 
+Route::resource('service', 'ServiceController');
