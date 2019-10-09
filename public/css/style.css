@@ -1,0 +1,58 @@
+nav div ul li a {
+    font-family: 'minipaxregular', Arial, Helvetica, sans-serif;
+}
+
+nav a {
+    font-family: 'minipaxbold', Arial, Helvetica, sans-serif;
+}
+
+.fa-color{
+    color:#ffbc00!important;
+    font-size: 1.5rem!important;
+}
+/* td,th{
+    vertical-align: middle!important;
+} */
+
+.col-margin{
+    margin: 2%;
+}
+
+.card-body{
+    padding: 0.25rem 1.25rem;
+}
+
+.img-index {
+    margin: 0 auto;
+    padding: 1%;
+    margin-top: 2%;
+    font-size: 8vw;
+}
+
+.pie {
+    text-align: center;
+    margin: 0 auto;
+    border-top-left-radius: 90%;
+    border-top-right-radius: 90%;
+    width: 80%;
+    height: 50px;
+}
+
+.textPie {
+    color: #656565;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    font-size: 1.5vw;
+    margin-bottom: 0;
+}
+
+.btnSpace {
+    margin-right: 5px;
+}
+
+.raleFont {
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+}

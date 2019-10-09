@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'minipaxmedium';
+    src: url('Minipax-Medium-webfont.eot');
+    src: url('Minipax-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Minipax-Medium-webfont.woff2') format('woff2'),
+         url('Minipax-Medium-webfont.woff') format('woff'),
+         url('Minipax-Medium-webfont.ttf') format('truetype'),
+         url('Minipax-Medium-webfont.svg#minipaxmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+

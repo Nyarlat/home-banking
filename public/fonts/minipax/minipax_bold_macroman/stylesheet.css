@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'minipaxbold';
+    src: url('Minipax-Bold-webfont.eot');
+    src: url('Minipax-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Minipax-Bold-webfont.woff2') format('woff2'),
+         url('Minipax-Bold-webfont.woff') format('woff'),
+         url('Minipax-Bold-webfont.ttf') format('truetype'),
+         url('Minipax-Bold-webfont.svg#minipaxbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
