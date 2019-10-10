@@ -51,10 +51,12 @@
     </div>
 
     <footer>
-        <div class="row" style="margin-top: 32px">
-            <div class="col">
-                <div class="pie bg-dark" style='padding-top: 1%'>
-                    <p class="textPie">Todos los derechos reservados a <em>Elefante de Caja</em> ©.</p>
+        <div class="container">
+            <div class="row" style="margin-top: 32px">
+                <div class="col">
+                    <div class="pie bg-dark" style='padding-top: 1%'>
+                        <p class="textPie">Todos los derechos reservados a <em>Elefante de Caja</em> ©.</p>
+                    </div>
                 </div>
             </div>
         </div>

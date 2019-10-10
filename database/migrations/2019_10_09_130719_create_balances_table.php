@@ -14,11 +14,11 @@ class CreateBalancesTable extends Migration
     public function up()
     {
         Schema::create('balance', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->date('fecha');
-            $table->string('desc');
-            $table->integer('importe');
-            $table->timestamps();
+            $table -> bigIncrements ('id');
+            $table -> date ('fecha');
+            $table -> string ('desc');
+            $table -> integer('importe');
+            $table -> timestamps ();
         });
     }
 

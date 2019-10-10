@@ -36,7 +36,7 @@ class ServiceController extends Controller
         $money = $request->get('importe');
 
         $balance = Balance::all();
-
+        
         $salary = 0;
 
         foreach ($balance as $item){
@@ -44,9 +44,10 @@ class ServiceController extends Controller
         }
 
         if($salary>=$money){
+
             $balance = new Balance();
             $balance -> fecha = date('y-m-d');
-            $balance -> desc = "Pago de Servicio" . $serviceName;
+            $balance -> desc = "Pago de Servicio: " . $serviceName;
             $balance -> importe = -$money;
             $balance -> save();
 

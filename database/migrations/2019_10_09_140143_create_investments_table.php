@@ -14,12 +14,12 @@ class CreateInvestmentsTable extends Migration
     public function up()
     {
         Schema::create('investments', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table -> bigIncrements('id');
             $table -> string ('empresa');
             $table -> integer ('acciones');
             $table -> integer ('valor');
             $table -> integer ('total');
-            $table->timestamps();
+            $table -> timestamps();
         });
     }
 
