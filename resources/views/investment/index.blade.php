@@ -10,12 +10,14 @@
         <div class="alert alert-primary" role="alert">
             <strong>Saldo $ {{ $salary }}</strong>
         </div>
+        
+        
         <table class="table table-hover">
             <thead>
                 <tr>
                     <th scope='col'>Empresa</th>
                     <th scope='col'>Acciones</th>
-                    <th scope='col'>Valor de Acción</th>
+                    <th scope='col'>Valor de Accion</th>
                     <th class="text-right" scope='col'>Compra/Venta de Acción</th>
                 </tr>
             </thead>
@@ -33,6 +35,7 @@
                 @endforeach
             </tbody>
         </table>
+        <a href="{{ url('investment/create') }}" class="btn btn-outline-secondary float-right">Añadir Accion</a>
     </div>
 
 </div>

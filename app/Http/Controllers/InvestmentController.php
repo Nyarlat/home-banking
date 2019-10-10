@@ -122,7 +122,7 @@ class InvestmentController extends Controller
      */
     public function create()
     {
-        //
+        return view ('investment.create');
     }
 
     /**
@@ -133,7 +133,16 @@ class InvestmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $service = new Service();
+
+        $service->empresa = $request->input('nombre');
+        $service->valor = $request->input('valor');
+        $service->cantidad = $request->input('cantidad');
+        $service->total = $request->input('cantidad');
+
+        $service->save();
+
+        return redirect()->route('investment.index');
     }
 
     /**
