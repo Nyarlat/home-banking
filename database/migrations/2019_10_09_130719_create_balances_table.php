@@ -17,7 +17,7 @@ class CreateBalancesTable extends Migration
             $table->bigIncrements('id');
             $table->date('fecha');
             $table->string('desc');
-            $table->date('importe');
+            $table->integer('importe');
             $table->timestamps();
         });
     }

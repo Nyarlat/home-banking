@@ -10,8 +10,8 @@
         <form action="{{ route('service.store') }}" method="Post">
             @csrf
             <div class="form-group">
-                <label for="serviceName">Nombre del Servicio</label>
-                <input type="text" class="form-control" name="serviceName" id="nombre">
+                <label for="nombre">Nombre del Servicio</label>
+                <input type="text" class="form-control" name="nombre" id="nombre">
             </div>
 
             <div class="form-group">

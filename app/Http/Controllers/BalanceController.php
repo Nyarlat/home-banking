@@ -14,7 +14,8 @@ class BalanceController extends Controller
      */
     public function index()
     {
-        $balance = Balance::orderBy('id','Desc')->get();
+        $balance = Balance::orderBy('id','Desc') -> get();
+        
         $salary = 0;
 
         foreach($balance as $item){

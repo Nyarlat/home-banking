@@ -27,10 +27,10 @@
                     <a class="nav-link" href="{!! url('/') !!}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{!! url('/balances') !!}">Balance</a>
+                    <a class="nav-link" href="{!! url('/balance') !!}">Balance</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{!! url('/services') !!}">Pago de Servicios</a>
+                    <a class="nav-link" href="{!! url('/service') !!}">Pago de Servicios</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{!! url('/investments') !!}">Inversiones</a>
@@ -46,10 +46,12 @@
         </div>
     </div>
 
-    @yield('content')
+    <div class="container">
+        @yield('content')
+    </div>
 
     <footer>
-        <div class="row">
+        <div class="row" style="margin-top: 32px">
             <div class="col">
                 <div class="pie bg-dark" style='padding-top: 1%'>
                     <p class="textPie">Todos los derechos reservados a <em>Elefante de Caja</em> ©.</p>

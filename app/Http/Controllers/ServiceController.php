@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Service;
+use App\Balance;
+use Session;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
@@ -15,7 +17,7 @@ class ServiceController extends Controller
     public function index()
     {
         $services = Service::all();
-        return view ('service.index')->with('service', $services);
+        return view ('service.index')->with('services', $services);
     }
 
     /**

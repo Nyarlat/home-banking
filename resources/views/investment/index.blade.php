@@ -26,16 +26,14 @@
                     <td>{{ $inv->acciones }} / {{ $inv->total }}</td>
                     <td>{{ $inv->valor }}</td>
                     <td class="text-right">
-                        <a href="{{ route('investment.buy', ['id'] => $inv->$id) }}" class="btn btn-primary">Comprar</a>
-                        <a href="{{ route('investment.sell', ['id'] => $inv->$id) }}" class="btn btn-secondary">Vender</a>
+                        <a href="{{ route('investment.buy', ['id' => $inv->id]) }}" class="btn btn-primary">Comprar</a>
+                        <a href="{{ route('investment.sell', ['id' => $inv->id]) }}" class="btn btn-secondary">Vender</a>
                     </td>
                 </tr>
-                @endeach
+                @endforeach
             </tbody>
         </table>
-
     </div>
-
 
 </div>
 

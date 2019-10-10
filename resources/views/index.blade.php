@@ -14,7 +14,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Balance</h5>
                     <p class="card-text">Controle sus gastos y proyecte sus futuros movimientos.</p>
-                    <a href="balance.php" class="btn btn-secondary btnHome">Ver Balance</a>
+                    <a href="{!! url('/balance') !!}" class="btn btn-secondary btnHome">Ver Balance</a>
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Pago de Servicios</h5>
                     <p class="card-text">Paga todo lo que necesites desde donde estes.</p>
-                    <a href="servicios.php" class="btn btn-secondary btnHome">Pagar Servicios</a>
+                    <a href="{!! url('/service') !!}" class="btn btn-secondary btnHome">Pagar Servicios</a>
                 </div>
             </div>
         </div>
@@ -36,7 +36,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Inversiones</h5>
                     <p class="card-text">Aumenta tus ahorros en el circuito financiero.</p>
-                    <a href="inversiones.php" class="btn btn-secondary btnHome">Invertir</a>
+                    <a href="{!! url('/investment') !!}" class="btn btn-secondary btnHome">Invertir</a>
                 </div>
             </div>
         </div>
