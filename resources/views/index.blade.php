@@ -5,7 +5,6 @@
 
 @section('content')
 
-
 <div class="container">
     <div class="row" style="padding: 2%">
         <div class="col col-margin">
