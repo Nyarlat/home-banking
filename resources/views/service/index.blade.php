@@ -30,7 +30,7 @@
             </div>
 
             <div class="form-group">
-                <a href="{{ url('service/create') }}" class="btn btn-secondary float-left">Añadir Servicio</a>
+                <a href="{{ url('service/create') }}" class="btn btn-outline-secondary float-left">Añadir Servicio</a>
                 <input type="submit" class="btn btn-primary float-right" value="Pagar Servicio">
             </div>
         </form>
