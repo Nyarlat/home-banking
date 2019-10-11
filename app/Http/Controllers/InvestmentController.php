@@ -20,28 +20,28 @@ class InvestmentController extends Controller
 
         $salary = $this->getSalary(0);
 
-        foreach($investments as $inv){
-            $operation = rand(1,3); //Random de [1,3)
+        foreach ($investments as $inv) {
+            $operation = rand(1, 3); //Random de [1,3)
 
-            if($operation == 1){
-                $inv-> valor = $inv->valor/2;
-            }else{
-                $inv-> valor = $inv->valor*2;
+            if ($operation == 1) {
+                $inv->valor = $inv->valor / 2;
+            } else {
+                $inv->valor = $inv->valor * 2;
             }
 
             $inv->save();
-
         }
 
-        return view('investment.index') ->with (['investments' => $investments, 'salary' => $salary]);
+        return view('investment.index')->with(['investments' => $investments, 'salary' => $salary]);
     }
 
-    public function getSalary($money){
+    public function getSalary($money)
+    {
         $balance = Balance::all();
         $salary = 0;
 
-        foreach($balance as $item){
-            $salary += $item -> importe;
+        foreach ($balance as $item) {
+            $salary += $item->importe;
         }
 
         $salary -= $money;
@@ -49,71 +49,65 @@ class InvestmentController extends Controller
         return $salary;
     }
 
-    public function buy($id){
+    public function buy($id)
+    {
         $inv = Investment::findOrFail($id);
 
-        if($inv->acciones > 0){
-            $salary = $this -> getSalary(0);
+        if ($inv->acciones > 0) {
+            $salary = $this->getSalary(0);
 
-            if($salary >= $inv -> valor){
-                $inv -> acciones -= 1;
-                $inv -> save();
+            if ($salary >= $inv->valor) {
+                $inv->acciones -= 1;
+                $inv->save();
 
                 $balance = new Balance();
 
-                $balance -> fecha = date('Y-m-d');
-                $balance -> desc = "Compra de Acción: " . $inv -> empresa;
-                $balance -> importe = $inv -> valor * -1;
-                $balance -> save();
+                $balance->fecha = date('Y-m-d');
+                $balance->desc = "Compra de Acción: " . $inv->empresa;
+                $balance->importe = $inv->valor * -1;
+                $balance->save();
 
-                dd("Se compro una acción de la empresa " . $inv -> empresa);
+                dd("Se compro una acción de la empresa " . $inv->empresa);
             } else {
-                dd("No tiene dinero suficiente para adquirir la acción de " . $inv -> empresa);
-                
+                dd("No tiene dinero suficiente para adquirir la acción de " . $inv->empresa);
             }
-
         } else {
             dd("No hay acciones disponibles para adquirir");
         }
-
-        }
-
-        public function sell($id){
-            $inv = Investment::findOrFail($id);
-
-            if($inv -> acciones > 0){
-                
-                if($inv -> acciones >= $inv -> total){
-                    dd("Careces de acciones adquiridas");
-                }
-
-                $salary = $this -> getSalary($inv -> valor);
-
-                if($salary >= 0){
-
-                    $inv -> acciones += 1;
-                    $inv -> save();
-
-                    $balance = new Balance();
-                    $balance -> fecha = date('Y-m-d');
-                    $balance -> desc = "Venta de Acción: " . $inv -> empresa;
-                    $balance -> importe = $inv -> valor;
-                    $balance -> save();
-                    
-                    dd("Se vendió una acción de la empresa " . $inv -> empresa);
-                
-                } else {
-                
-                    dd("No tiene dinero suficiente para adquirir la acción de " . $inv -> empresa);
-                    
-                }
-
-            } else {
-                dd("No hay acciones disponibles para vender");
-            }
     }
 
-    
+    public function sell($id)
+    {
+        $inv = Investment::findOrFail($id);
+
+        if ($inv->acciones > 0) {
+
+            if ($inv->acciones >= $inv->total) {
+                dd("Careces de acciones adquiridas");
+            }
+
+            $salary = $this->getSalary($inv->valor);
+
+            if ($salary >= 0) {
+
+                $inv->acciones += 1;
+                $inv->save();
+
+                $balance = new Balance();
+                $balance->fecha = date('Y-m-d');
+                $balance->desc = "Venta de Acción: " . $inv->empresa;
+                $balance->importe = $inv->valor;
+                $balance->save();
+
+                dd("Se vendió una acción de la empresa " . $inv->empresa);
+            } else {
+
+                dd("No tiene dinero suficiente para adquirir la acción de " . $inv->empresa);
+            }
+        } else {
+            dd("No hay acciones disponibles para vender");
+        }
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -122,7 +116,7 @@ class InvestmentController extends Controller
      */
     public function create()
     {
-        return view ('investment.create');
+        return view('investment.create');
     }
 
     /**

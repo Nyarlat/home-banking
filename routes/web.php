@@ -13,16 +13,15 @@
 
 
 Route::get('/','HomeController@index');
+
 Route::get('balance', 'BalanceController@index');
 
 Route::get('service', 'ServiceController@index');
-
 Route::resource('service', 'ServiceController');
-
 Route::post('service/pay', 'ServiceController@pay') -> name('service.pay');
 
 Route::get('investments', 'InvestmentController@index');
 Route::get('investments/buy{id}', 'InvestmentController@buy') -> name('investment.buy');
 Route::get('investments/sell{id}', 'InvestmentController@sell') -> name('investment.sell');
-
+Route::resource('investments', 'InvestmentController');
 
