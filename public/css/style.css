@@ -69,3 +69,6 @@ nav a {
 }
 
 
+.minHeight{
+    min-height: 200px;
+}
