@@ -35,7 +35,7 @@
                 @endforeach
             </tbody>
         </table>
-        <a href="{{ url('investments/create') }}" class="btn btn-outline-secondary float-right">Añadir Accion</a>
+        <a href="{{ url('investment/create') }}" class="btn btn-outline-secondary float-right">Añadir Accion</a>
     </div>
 
 </div>
