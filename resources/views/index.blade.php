@@ -35,7 +35,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Inversiones</h5>
                     <p class="card-text">Aumenta tus ahorros en el circuito financiero.</p>
-                    <a href="{!! url('/investment') !!}" class="btn btn-secondary btnHome">Invertir</a>
+                    <a href="{!! url('/investments') !!}" class="btn btn-secondary btnHome">Invertir</a>
                 </div>
             </div>
         </div>
