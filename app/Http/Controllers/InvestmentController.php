@@ -130,7 +130,7 @@ class InvestmentController extends Controller
     {
         $invest = new Investment();
 
-        $invest->empresa = $request->input('nombre')->unique();
+        $invest->empresa = $request->input('nombre');
         $invest->valor = $request->input('valor');
         $invest->acciones = $request->input('cantidad');
         $invest->total = $request->input('cantidad');
