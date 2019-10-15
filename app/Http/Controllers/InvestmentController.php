@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Service;
 use App\Investment;
 use App\Balance;
 use App\Investment as AppInvestment;
@@ -127,14 +128,14 @@ class InvestmentController extends Controller
      */
     public function store(Request $request)
     {
-        $service = new Service();
+        $invest = new Investment();
 
-        $service->empresa = $request->input('nombre');
-        $service->valor = $request->input('valor');
-        $service->cantidad = $request->input('cantidad');
-        $service->total = $request->input('cantidad');
+        $invest->empresa = $request->input('nombre')->unique();
+        $invest->valor = $request->input('valor');
+        $invest->acciones = $request->input('cantidad');
+        $invest->total = $request->input('cantidad');
 
-        $service->save();
+        $invest->save();
 
         return redirect()->route('investment.index');
     }

@@ -72,3 +72,9 @@ nav a {
 .minHeight{
     min-height: 250px;
 }
+
+.jumboBG{
+    background: #545E75;
+    background-color: #000000;
+    clip-path: polygon(0 95%, 100% 87%, 100% 100%, 0% 100%);
+}
